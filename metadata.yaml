@@ -1,5 +1,5 @@
 homepage: "https://welcomingweb.com/"
 documentation: "https://help.welcomingweb.com/integrations/"
 versions:
-  - sha: 5f02a788b90ae804f86b04aa24af8937e567874a
-    changeNotes: Initial release (light GTM template).
+  - sha: 889b2ea16d6e5d5e389587a790aeb35bca4f25bc
+    changeNotes: Initial release.
