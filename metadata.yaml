@@ -2,6 +2,6 @@ homepage: "https://welcomingweb.com/"
 documentation: "https://help.welcomingweb.com/integrations/gtm-integration"  
 versions:
   # Latest version (replace with the SHA of the commit that adds your final template.tpl)
-  - sha: 88328f9725a03977e08b5ff51cde971f389f800d
+  - sha: d085660b0bd02a3ca60f540faf77bf2c748d26f7
     changeNotes: |
       Initial release of the WelcomingWeb Accessibility Widget GTM template.
