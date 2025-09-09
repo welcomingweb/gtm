@@ -1,29 +1,30 @@
 # WelcomingWeb Accessibility Widget – GTM Template (Light)
 
+## Overview
 Loads the WelcomingWeb Accessibility Widget via CDN with a single required field: **Widget ID**.
 
-## Install & use
+## Install & Use
 1. In GTM: **Templates → Tag Templates → Import** `template.tpl`.
 2. Create a tag: **Tags → New → WelcomingWeb Accessibility Widget**.
 3. Fill **Widget ID** (UUID).
-4. (Optional) **Requires Consent** (e.g., `functional` or `functional,analytics`) if you gate loading via CMP.
-5. (Optional) **CSP Nonce** if your site uses a nonce and you want the injected `<script>` to carry it.
-6. Trigger on **All Pages** (or as needed) → Publish.
+4. (Recommended) Open **Advanced → Consent Settings** and require the consent types your policy needs (e.g., `functionality_storage`).
+5. Add a trigger (e.g., **All Pages**) and publish.
 
 ## What the template injects
-A single `<script>` tag:
-- `src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js"`
-- `data-widget-id="..."` (required)
-- `data-requires-consent="..."` (optional)
-- `data-csp-nonce="..."` (optional)
+A single script tag:
 
-All styling/positioning/behavior defaults come from the server configuration.
-
-## Optional: consent gating
-The tag can wait for consent categories before initializing. You can grant via your CMP’s GTM consent integration or manually:
 ```html
-<script>
-  // Example manual grant (use the categories you configured)
-  window.welcomingWeb = window.welcomingWeb || {};
-  window.welcomingWeb.grantConsent && window.welcomingWeb.grantConsent();
-</script>
+<script src="https://cdn-01.welcomingweb.com/a11y-widget.bundle.js?wid=YOUR_WIDGET_ID"></script>
+
+All styling, positioning, and behavior defaults are controlled by your server-side configuration.
+
+## Consent & CSP
+
+**Consent:** Managed by GTM’s Consent Mode. Use **Consent Settings** (and/or the template’s built-in consent checks) to gate this tag. No additional template fields or manual `grantConsent()` calls are needed.  
+**CSP:** If you use a nonce, adopt GTM’s **nonce-aware container snippet** so GTM applies the nonce automatically.
+
+## Support
+
+- Website: <https://welcomingweb.com>
+- Docs: <https://help.welcomingweb.com>
+- Issues: Enable GitHub Issues on the template repository.
