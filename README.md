@@ -1,4 +1,4 @@
-# WelcomingWeb Accessibility Widget – GTM Template (Light)
+# WelcomingWeb Accessibility Widget – GTM Template
 
 ## Overview
 Loads the WelcomingWeb Accessibility Widget via CDN with a single required field: **Widget ID**.
